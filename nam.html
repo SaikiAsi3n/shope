@@ -49,6 +49,12 @@
           </button>
       </div>
       
+      <div class="main__item">
+        <div class="giohang" id="btn2">
+          <ion-icon name="bag-outline"></ion-icon>
+        </div>
+        
+      </div>
       <div class="header__login--infomation">
         <ul class="nav justify-content-end ">
           <li class="nav-item">
@@ -66,6 +72,7 @@
         </ul>
       </div>    
     </div>
+    
     <div class="header__nav">
       <ul class="nav taskbar">
         <li class="nav-item">
@@ -94,15 +101,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Túi phụ kiện</a>
-        </li>
-        
-        
+        </li>          
       </ul>
     </div>
   </div>
-
+  
   <div id="main">
-      
+    
       <div class="quangcao">
         <div class="quangcao__to">
           <div class="quangcao__to__img">
@@ -122,6 +127,31 @@
           <img class="img__nho" src="./img/qc2.jpg" alt="img">
         </div>
       </div>
+      <div class="main__home">
+          <a href="#">
+            <ion-icon name="arrow-up-circle-outline"></ion-icon>
+          </a>      
+      </div>
+      
+      <div class="giohang__number">
+        <p style="font-size: x-large; text-align: center;" id="giohang__number" >
+        </p>
+      </div>
+      <div id="myGioHang" style="border: solid 1px; padding: 20px; background: #ddd;" class="myGioHang">
+        <h2 class="tieude" style="font-size: 32px;">Giỏ hàng</h2>
+        <div class="myGioHang__noidung">
+            <p id="soluong"></p>
+            <p id="gia"></p>            
+        </div>
+        
+        <div class="tong">
+            <p id="text">Total:</p>
+            <p id="tong"></p>
+        </div>  
+      </div>
+      <input type="button" id="btn1" value="-"/>
+
+
       <div class="container">   
         <div class="container__hot">
           Sản phẩm bán chạy
@@ -129,19 +159,27 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
           <div class="col">
             <img id="myImg" src="./img/hot1.jpg" alt="túi xám"> 
-            <div class="cost">0 VND</div>          
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div>          
           </div>
           <div class="col">
             <img id="myImg" src="./img/hot2.jpg" alt="túi gấu">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/hot3.jpg" alt="cặp sách hồng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/hot4.jpg" alt="túi hoa">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
         </div>
       </div>
@@ -153,19 +191,27 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
           <div class="col">
             <img id="myImg" src="./img/sale1.jpg" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/sale2.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/sale3.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/sale4.jfif" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
         </div>
       </div>
@@ -212,68 +258,100 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
           <div class="col">
             <img id="myImg" src="./img/item1.png" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item2.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item3.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item4.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item5.jpg" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item6.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item7.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item8.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
         
           <div class="col">
             <img id="myImg" src="./img/item9.jpg" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item10.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item11.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item12.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item13.jpg" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item14.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item15.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/item4.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>         
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div>          
           </div>
           
         </div> 
@@ -282,6 +360,7 @@
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" style="width:6rem; font-weight: bold;">Select</a>
+            
           </li>
           <li class="nav-item dropdown">
             <p class="nav-link dropdown-toggle" data-bs-toggle="dropdown"  role="button" aria-expanded="false">Bàn phím</p>
@@ -310,35 +389,51 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
           <div class="col">
             <img id="myImg" src="./img/phim1.jpg" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim2.jpg" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim3.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim4.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim5.png" alt="túi xanh">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim6.png" alt="túi trắng">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim7.jpg" alt="bàn phím">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
           <div class="col">
             <img id="myImg" src="./img/phim1.jpg" alt="mặt nạ">
-            <div class="cost">0 VND</div>
+            <div class="cost">
+              <button type="button" onclick="gioHang()"> Thêm vào giỏ </button>
+            </div> 
           </div>
         </div> 
       </div>
@@ -346,13 +441,47 @@
       
       
 
+    <!-- <button class="button" onclick="gioHang()"> click </button> -->
+    
+    
+    <!-- <input type="button" id="btn2" value="Hiển Thị"/> -->
+
+
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
-      </div>
+    </div>
       
       <script>
+        // hiển thị giỏ đồ //
+        let sl=1;
+        function gioHang() {
+            let soluong="";  
+            let gia=""; 
+            let total=0;        
+            for (let i=1; i<=sl; i++){
+                soluong += "túi gấu x1" + "</br>";
+                gia+= "25.000" + "</br>";
+                total+=25000;
+            };
+            sl++;
+            
+            document.getElementById("soluong").innerHTML = soluong;
+            document.getElementById("gia").innerHTML = gia;
+            document.getElementById("tong").innerHTML = total;                 
+        }
+
+
+        document.getElementById("btn1").onclick = function () {
+                document.getElementById("myGioHang").style.display = 'none';
+        };
+        document.getElementById("btn2").onclick = function () {
+                document.getElementById("myGioHang").style.display = 'block';
+        };
+
+
+        // phóng to ảnh //
         var img = document.getElementById('myImg');
         var modal = document.getElementById('myModal');                   
         var modalImg    = document.getElementById("img01");

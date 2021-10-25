@@ -70,11 +70,14 @@
 .header__nav{
     margin-top: 1rem;
     background-color: black;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     height: 3rem;
-    position: relative;
+    z-index: 100000;
+    display: block;
+    position: relative;  
 }
+
 .nav{
     margin-left: 5rem;
     text-align: center;
@@ -96,7 +99,7 @@
 
 #main{
     width: 100%;
-    height: 600rem;
+    
 }
 .quangcao{
     margin-left: 5rem;
@@ -117,6 +120,7 @@
 .img__to{
     width: 55rem;
     height: 30rem;
+    transition: 1s all;
 }
 
 .quangcao__iconback{
@@ -164,7 +168,29 @@
         object-fit: cover   ;
     }
   }
-
+.main__item{
+    font-size: 3rem;
+    position: fixed;
+    cursor: pointer;
+    right: 0;
+    top: 15rem;
+}
+.giohang__number{
+    position: fixed;
+    right: 1.1rem;
+    top: 21rem;
+    color: red;
+    cursor: pointer;
+}
+.main__home{
+    font-size: 3rem;
+    position: fixed;
+    cursor: pointer;
+    right: 0;
+}
+.main__home a:link{
+    text-decoration: none;
+}
 .container{
     border-bottom: 0.01rem dotted black;
     padding: 2rem;
@@ -204,10 +230,11 @@
     overflow: hidden;   
 }
 
-.cost{
-    text-align: center;
+.cost button{
     color: red;
     font-weight: bold;
+    border: none;
+    margin-left: 5rem;
 }
 
 #myImg {
@@ -215,6 +242,63 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
+.myGioHang{
+    height: 20rem;
+    width: 20rem;
+    background-color: antiquewhite;
+    
+    display: none;
+    top: 20rem;
+    right: 0rem;
+    position: fixed;
+    z-index: 100000;
+}
+
+.myGioHang>h2{
+    text-align: center;
+    
+}
+.myGioHang__noidung{
+    height: 13rem;
+    width: 17rem;
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow: scroll;
+    padding: 2rem;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    
+}
+#soluong{
+    float: left;
+}
+#gia{
+    float: right;
+}
+.tong{
+    border-top: 2px solid black;
+    margin: 1rem 2rem 0 2rem;
+    color:  red;
+    font-weight: bold;
+    font-size: larger;
+}
+#text{
+    float: left;
+    margin-left: 2rem;
+}
+#tong{
+    float: right;
+    margin-right: 0rem;
+}
+#btn1{
+    top: 20rem;
+    right: 0rem;
+    position: fixed;
+    z-index: 100000;
+}
+
   
 #myImg:hover {opacity: 0.7;}
   
@@ -229,11 +313,10 @@
     width: 100%; /* dài */
     height: 100%; /* cao */
     overflow: auto; /* bật cuộn nếu cần */
-  
     background-color: rgba(0,0,0,0.9); /* màu nền */
 }
   
-  /* Ảnh sau khi blick */
+  /* Ảnh sau khi click */
 .modal-content {
     margin: auto;
     display: block;
