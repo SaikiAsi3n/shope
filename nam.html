@@ -459,19 +459,21 @@
         function gioHang() {
             let soluong="";  
             let gia=""; 
-            let total=0;        
+            let total=0; 
+            let so=0;       
             for (let i=1; i<=sl; i++){
                 soluong += "túi gấu x1" + "</br>";
                 gia+= "25.000" + "</br>";
                 total+=25000;
+                so++;
             };
             sl++;
             
             document.getElementById("soluong").innerHTML = soluong;
             document.getElementById("gia").innerHTML = gia;
-            document.getElementById("tong").innerHTML = total;                 
-        }
-
+            document.getElementById("tong").innerHTML = total; 
+            document.getElementById("giohang__number").innerHTML = so;                
+        }       
 
         document.getElementById("btn1").onclick = function () {
                 document.getElementById("myGioHang").style.display = 'none';
