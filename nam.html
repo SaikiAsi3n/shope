@@ -52,9 +52,9 @@
       <div class="main__item">
         <div class="giohang" id="btn2">
           <ion-icon name="bag-outline"></ion-icon>
-        </div>
-        
+        </div>   
       </div>
+
       <div class="header__login--infomation">
         <ul class="nav justify-content-end ">
           <li class="nav-item">
@@ -133,15 +133,18 @@
           </a>      
       </div>
       
-      <div class="giohang__number">
+      <div class="giohang__number" id="btn2">
         <p style="font-size: x-large; text-align: center;" id="giohang__number" >
         </p>
       </div>
       <div id="myGioHang" style="border: solid 1px; padding: 20px; background: #ddd;" class="myGioHang">
         <h2 class="tieude" style="font-size: 32px;">Giỏ hàng</h2>
         <div class="myGioHang__noidung">
-            <p id="soluong"></p>
-            <p id="gia"></p>            
+          
+          <p id="xoa" onclick="xoaItem()"></p>
+           
+          <p id="soluong"></p>
+          <p id="gia"></p>            
         </div>
         
         <div class="tong">
@@ -455,25 +458,50 @@
       
       <script>
         // hiển thị giỏ đồ //
-        let sl=1;
+        let sl=0;
         function gioHang() {
+            sl++;
             let soluong="";  
             let gia=""; 
             let total=0; 
-            let so=0;       
+            let so=0; 
+            let xoa="";      
             for (let i=1; i<=sl; i++){
                 soluong += "túi gấu x1" + "</br>";
                 gia+= "25.000" + "</br>";
                 total+=25000;
                 so++;
-            };
-            sl++;
+                xoa+= "x" + "</br>";
+            };          
             
+            
+            document.getElementById("xoa").innerHTML = xoa;
             document.getElementById("soluong").innerHTML = soluong;
             document.getElementById("gia").innerHTML = gia;
             document.getElementById("tong").innerHTML = total; 
             document.getElementById("giohang__number").innerHTML = so;                
-        }       
+        }
+        
+        function xoaItem(){
+            sl--;
+            let soluong="";  
+            let gia=""; 
+            let total=0; 
+            let so=0; 
+            let xoa="";
+            for (let i=1; i<=sl; i++){
+                soluong += "túi gấu x1" + "</br>";
+                gia+= "25.000" + "</br>";
+                total+=25000;
+                so++;
+                xoa+= "x" + "</br>";
+            };
+            document.getElementById("soluong").innerHTML = soluong;
+            document.getElementById("gia").innerHTML = gia;
+            document.getElementById("tong").innerHTML = total; 
+            document.getElementById("giohang__number").innerHTML = so; 
+            document.getElementById("xoa").innerHTML = xoa;
+        }
 
         document.getElementById("btn1").onclick = function () {
                 document.getElementById("myGioHang").style.display = 'none';
@@ -499,7 +527,7 @@
           }
       </script>
 
-      </div>
+    </div>
 
       <script src="js.js"></script>
 </body>

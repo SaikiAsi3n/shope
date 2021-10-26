@@ -174,13 +174,15 @@
     cursor: pointer;
     right: 0;
     top: 15rem;
+    box-sizing: border-box;
 }
 .giohang__number{
     position: fixed;
-    right: 1.1rem;
-    top: 21rem;
+    right: 1rem;
+    top: 16rem;
     color: red;
     cursor: pointer;
+    
 }
 .main__home{
     font-size: 3rem;
@@ -247,7 +249,6 @@
     height: 20rem;
     width: 20rem;
     background-color: antiquewhite;
-    
     display: none;
     top: 20rem;
     right: 0rem;
@@ -266,13 +267,18 @@
     word-break: keep-all;
     overflow: scroll;
     padding: 2rem;
-    margin-left: 1.5rem;
+    margin-left: 0rem;
     margin-top: 0.5rem;
     display: inline-block;
     
 }
+#xoa{
+    float: left;
+    cursor: pointer;
+}
 #soluong{
     float: left;
+    margin-left: 1.5rem;
 }
 #gia{
     float: right;
