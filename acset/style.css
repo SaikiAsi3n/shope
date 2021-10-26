@@ -67,6 +67,84 @@
     color: black;
 }
 
+.dangnhap{
+    position: fixed;
+    margin-top: 10rem;
+    width: 20rem;
+    height: 30rem;
+    background-color: beige;
+    border-radius: 5%;
+    left: 36rem;
+    z-index: 10000;
+    display: none;
+}
+.dangki{
+    position: fixed;
+    margin-top: 10rem;
+    width: 20rem;
+    height: 30rem;
+    background-color: beige;
+    border-radius: 5%;
+    z-index: 10000;
+    left: 36rem;
+    display: none;
+}
+.dau{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.giua{
+    padding: 2rem
+}
+.tk{
+    padding-bottom: 1rem;  
+
+}
+.tk>p{
+    font-size: large;
+}
+.tk>input{
+    padding-left: 0.5rem;
+    width: 15rem;
+}
+.mk{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.mk>p{
+    font-size: large;
+}
+.mk>input{
+    padding-left: 0.5rem;
+    width: 15rem;
+}
+.dn{
+    padding-top: 2rem;
+}
+.dn>button{
+    margin-bottom: 5rem;
+    font-weight: bolder;
+    font-size: medium;
+    cursor: pointer;
+    margin-left: 5rem;
+}
+.dn>button:hover{
+    color: green;
+    
+}
+.dk{
+    padding-left: 6rem;
+    font-weight: bold;
+}
+.dk:hover{
+    color: red;
+}
+.dk:link{
+    text-decoration: none;
+}
+
 .header__nav{
     margin-top: 1rem;
     background-color: black;

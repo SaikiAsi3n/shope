@@ -58,7 +58,7 @@
       <div class="header__login--infomation">
         <ul class="nav justify-content-end ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color:black">Sign up & Save</a>
+            <a id="btn4" class="nav-link active" aria-current="page" href="#" style="color:black">LOGIN</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" style="color:black">Store Locator</a>
@@ -70,7 +70,44 @@
             <a class="nav-link" href="#" style="color:black">Checkout</a>
           </li>
         </ul>
-      </div>    
+      </div>  
+      <div class="dangnhap" id="dangnhap">
+        <div class="dau">
+            <h2>Đăng nhập</h2>
+        </div>
+        <div class="giua">
+          <form>                  
+            <p>Tài khoản</p>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="YourEmail" title="Nhập đúng email"><br/>
+
+            <p>Password:</p>
+            <input type="password" name="password" pattern=".{6,}" title="Nhập mật khẩu từ sáu ký tự trở lên"><br/>
+            <input type="submit" value="Đăng nhập">
+        </form>
+            <div class="dn">
+                
+                <p>Bạn chưa có tài khoản? Đăng kí ngay</p>
+                <a href="#" class="dk" id="btn3">tại đây</a>
+            </div>
+        </div>
+    </div>
+    <div class="dangki" id="dangki">
+        <div class="dau">
+            <h2>Đăng kí</h2>
+        </div>
+        <div class="giua">
+            <div class="tk">
+                <form>                  
+                    <p>Tài khoản</p>
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email@domain.com" title="Nhập đúng email"><br/>
+
+                    <p>Password:</p>
+                    <input type="password" name="password" pattern=".{6,}" title="Nhập mật khẩu từ sáu ký tự trở lên"><br/>
+                    <input type="submit" value="Đăng ký">
+                </form>
+            </div>           
+        </div>
+    </div>
     </div>
     
     <div class="header__nav">
@@ -508,6 +545,12 @@
         };
         document.getElementById("btn2").onclick = function () {
                 document.getElementById("myGioHang").style.display = 'block';
+        };
+        document.getElementById("btn3").onclick = function () {
+                document.getElementById("dangki").style.display = 'block';
+        };
+        document.getElementById("btn4").onclick = function () {
+                document.getElementById("dangnhap").style.display = 'block';
         };
 
 
