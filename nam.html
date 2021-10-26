@@ -72,13 +72,16 @@
         </ul>
       </div>  
       <div class="dangnhap" id="dangnhap">
+        <div>
+          <div id="tatdn">X</div>
+        </div>
         <div class="dau">
             <h2>Đăng nhập</h2>
         </div>
         <div class="giua">
           <form>                  
             <p>Tài khoản</p>
-            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="YourEmail" title="Nhập đúng email"><br/>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="abc@gmail.com" title="Nhập đúng email"><br/>
 
             <p>Password:</p>
             <input type="password" name="password" pattern=".{6,}" title="Nhập mật khẩu từ sáu ký tự trở lên"><br/>
@@ -92,6 +95,7 @@
         </div>
     </div>
     <div class="dangki" id="dangki">
+        <div id="tatdk">X</div>
         <div class="dau">
             <h2>Đăng kí</h2>
         </div>
@@ -99,7 +103,7 @@
             <div class="tk">
                 <form>                  
                     <p>Tài khoản</p>
-                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email@domain.com" title="Nhập đúng email"><br/>
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="abc@gmail.com" title="Nhập đúng email"><br/>
 
                     <p>Password:</p>
                     <input type="password" name="password" pattern=".{6,}" title="Nhập mật khẩu từ sáu ký tự trở lên"><br/>
@@ -551,6 +555,13 @@
         };
         document.getElementById("btn4").onclick = function () {
                 document.getElementById("dangnhap").style.display = 'block';
+        };
+        document.getElementById("tatdn").onclick = function () {
+                document.getElementById("dangnhap").style.display = 'none';
+        };
+        document.getElementById("tatdk").onclick = function () {
+                document.getElementById("dangki").style.display = 'none';
+                document.getElementById("dangnhap").style.display = 'none';
         };
 
 
